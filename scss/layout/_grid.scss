@@ -1,0 +1,19 @@
+@import '../abstracts/variables';
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: $wrapper-color;
+ }
+body {
+    position: relative; 
+    margin: auto;
+    max-width: 800px;
+    height: 100%;
+    background-color: $body-color;
+}
+.body-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
