@@ -1,12 +1,29 @@
 $body-color: #e2e8e8;
-$main-color: #ad7751;
-$wrapper-color: #b5b5b5;
+$main-color: #58d6b0;
 
 h1 {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: bold;
+    font-size: 3em;
+    color: black;
+}
+h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
     font-size: 2.5em;
-    line-height: 3,3em;
-    color: white;
+    color: black;
+}
+h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+}
+a {
+    font-family: 'Poppins';
+    color: black;
+    text-decoration: none;
 }

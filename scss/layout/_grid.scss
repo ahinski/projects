@@ -3,7 +3,7 @@ html {
     margin: 0px;
     height: 100%;
     width: 100%;
-    background-color: $wrapper-color;
+    background-color: $main-color;
  }
 body {
     position: relative; 
@@ -11,6 +11,9 @@ body {
     max-width: 800px;
     height: 100%;
     background-color: $body-color;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 .body-container {
     display: flex;
