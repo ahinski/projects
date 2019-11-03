@@ -1,2 +1,87 @@
 .projects {
+    position: relative;
+    left: 20%;
+    margin-top: 30px;
+    @media screen and (max-width: 800px) {
+        left: 0;
+        margin: 0;
+        text-align: center;
+    }
+}
+.projects-header {
+    margin: 0;
+    font-size: 2em;
+}
+.projects-slider {
+    position: relative;
+    margin-top: 20px;
+    @media screen and (max-width: 800px) {
+        left: 10%;
+    }
+}
+.projects-slider-control {
+    position: absolute;
+    top: 50px;
+}
+.projects-slider-item {
+    position: absolute;
+    display: none;
+    grid-template-columns: 30% 70%;
+    width: 1.5*350px;
+    height: 350px;
+    border: 4px solid black;
+}
+.description {
+    padding-top: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    color: black;
+    text-align: center;    
+    background-color: rgba(255,255,255,0.1);
+    border-right: 4px solid black;
+    border-bottom: 4px solid black;
+    span {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+.image img {
+    width: 0.7*1.5*350px;
+    height: 350px;
+}
+.projects-slider-control {
+    position: absolute;
+    height: 350px;
+    top: 4px;
+    font-size: 3em;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: color .1s ease-in-out;
+    transition: font-size .01s ease-in-out;
+    &:hover {
+        color: $main-color;
+        font-size: 3.5em;
+    }
+    @media screen and (max-width: 800px) {
+        top: 350px;
+        height: auto;
+    }
+}
+.control-left {
+    left: -60px;
+    @media screen and (max-width: 800px) {
+        left: 0px;
+    }
+}
+.control-right {
+    left: 350*1.5+20px;
+    @media screen and (max-width: 800px) {
+        left: 350*1.5-40px;
+    }
+}
+.slider-current {
+    display: grid;
 }

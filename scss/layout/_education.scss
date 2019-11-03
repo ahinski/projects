@@ -1,6 +1,10 @@
 .education {
     position: relative;
     left: 20%;
+    @media screen and (max-width: 800px) {
+        left: 0;
+        margin: auto;
+    }
 }
 .education-header {
     margin: 0;
@@ -8,6 +12,7 @@
     font-size: 2em;
 }
 .education-btn {
+    display: block;
     &:hover {
         h2 {
             color: $dark-color;
