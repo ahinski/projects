@@ -1,2 +1,39 @@
 .education {
+    position: relative;
+    left: 20%;
+}
+.education-header {
+    margin: 0;
+    margin-top: 20px;
+    font-size: 2em;
+}
+.education-btn {
+    &:hover {
+        h2 {
+            color: $dark-color;
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}
+.education-btn-list {
+    display: none;
+    width: 250px;
+    text-align: left;
+    list-style-type: none;    
+    transition: opacity .1s ease;
+}
+.education-btn-list-element {
+    margin: 10px;
+    height: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: black;
+}
+.education-open {
+    display: block;
+    height: 100%;
 }

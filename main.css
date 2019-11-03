@@ -2,16 +2,30 @@ h1 {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 3.5em;
   color: black;
 }
 
 h2 {
+  display: inline-block;
   font-family: "Poppins";
   font-style: normal;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 3em;
   color: black;
+  vertical-align: center;
+}
+
+.education-btn h2 {
+  transition: color 0.1s ease;
+}
+.education-btn h2:after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #013950;
+  transition: width 0.1s ease;
 }
 
 h3 {
@@ -22,17 +36,26 @@ h3 {
   color: black;
 }
 
-a {
+.personal_info a {
   font-family: "Poppins";
   color: black;
   text-decoration: none;
+  transition: color 0.1s ease-in-out;
+}
+.personal_info a:after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #013950;
+  transition: width 0.1s ease-in-out;
 }
 
 html {
   margin: 0px;
   height: 100%;
   width: 100%;
-  background-color: #58d6b0;
+  background-color: #3b827e;
 }
 
 body {
@@ -40,7 +63,7 @@ body {
   margin: auto;
   max-width: 800px;
   height: 100%;
-  background-color: #e2e8e8;
+  background-color: #d1d098;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -124,16 +147,30 @@ h1 {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 3.5em;
   color: black;
 }
 
 h2 {
+  display: inline-block;
   font-family: "Poppins";
   font-style: normal;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 3em;
   color: black;
+  vertical-align: center;
+}
+
+.education-btn h2 {
+  transition: color 0.1s ease;
+}
+.education-btn h2:after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #013950;
+  transition: width 0.1s ease;
 }
 
 h3 {
@@ -144,10 +181,19 @@ h3 {
   color: black;
 }
 
-a {
+.personal_info a {
   font-family: "Poppins";
   color: black;
   text-decoration: none;
+  transition: color 0.1s ease-in-out;
+}
+.personal_info a:after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background-color: #013950;
+  transition: width 0.1s ease-in-out;
 }
 
 .switch {
@@ -157,59 +203,91 @@ a {
   bottom: 10px;
   width: 100px;
   height: 50px;
-  background-color: #58d6b0;
+  background-color: #3b827e;
 }
 
 .header {
   text-align: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.29);
 }
 
 .personal_info {
-  display: grid;
-  grid-template-areas: "photo name" "photo github" "photo social";
-  grid-template-columns: 40% 1fr;
-  grid-template-rows: 50% 25% 25%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.29);
+  /* display: grid;
+   grid-template-areas:
+   'photo name'
+   'photo github'
+   'photo social';
+   grid-template-columns: 40% 1fr;
+   grid-template-rows: 50% 25% 25%; */
 }
 
-.personal_info-photo {
-  grid-area: photo;
+.personal_info-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  .personal_info-top {
+    display: block;
+    text-align: center;
+  }
+}
+
+.personal_info-top-container {
+  display: grid;
+  grid-template-areas: "name" "github";
+  grid-template-rows: 60% 40%;
+}
+
+.personal_info-top-photo {
   text-align: center;
 }
 
 .personal_info-block {
   margin-left: 15%;
 }
-
-.personal_info-name {
-  grid-area: name;
-  text-align: center;
+@media screen and (max-width: 700px) {
+  .personal_info-block {
+    margin: 0;
+  }
 }
 
-.personal_info-github {
+.personal_info-top-name {
+  grid-area: name;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.personal_info-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.personal_info-social-github {
   grid-area: github;
   display: flex;
   align-items: center;
 }
+.personal_info-social-github:hover .personal_info-social-github-link a:after {
+  width: 100%;
+  color: #013950;
+}
+.personal_info-social-github:hover .personal_info-social-github-link a {
+  color: #013950;
+}
 
-.personal_info-github-icon, .personal_info-telegram-icon {
+.personal_info-social-github-icon, .personal_info-social-telegram-icon {
   display: inline-block;
 }
 
-.personal_info-github-link {
+.personal_info-social-github-link {
   display: inline-block;
   margin-left: 10px;
   margin-bottom: 7px;
 }
-.personal_info-github-link a {
-  font-size: 1.2em;
+.personal_info-social-github-link a {
+  font-size: 1.3em;
   font-weight: bold;
-}
-
-.personal_info-social {
-  grid-area: social;
-  width: 70%;
 }
 
 .personal_info-social-header {
@@ -217,31 +295,83 @@ a {
 }
 
 .personal_info-social-telegram {
-  display: inline-block;
+  grid-area: tg;
+  display: flex;
+  align-items: center;
+}
+.personal_info-social-telegram:hover .personal_info-social-telegram-link a:after {
+  width: 100%;
+}
+.personal_info-social-telegram:hover .personal_info-social-telegram-link a {
+  color: #013950;
 }
 
-.personal_info-telegram-link {
+.personal_info-social-telegram-link {
   display: inline-block;
   margin-left: 5px;
+  margin-bottom: 7px;
 }
-.personal_info-telegram-link a {
-  font-size: 1.2em;
+.personal_info-social-telegram-link a {
+  font-size: 1.3em;
   font-weight: bold;
 }
 
 .photo {
-  width: 150px;
+  width: 200px;
   height: 200px;
   margin: 30px;
-  border-radius: 45%;
-  -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  border: 4px solid black;
+  transition: border 0.1s ease-in-out;
+}
+.photo:hover {
+  border: 4px solid #013950;
 }
 
 .github-logo, .telegram-logo {
   width: 26.4px;
   height: 30px;
+}
+
+.education {
+  position: relative;
+  left: 20%;
+}
+
+.education-header {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.education-btn:hover h2 {
+  color: #013950;
+}
+.education-btn:hover h2:after {
+  width: 100%;
+}
+
+.education-btn-list {
+  display: none;
+  width: 250px;
+  text-align: left;
+  list-style-type: none;
+  transition: opacity 0.1s ease;
+}
+
+.education-btn-list-element {
+  margin: 10px;
+  height: 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2em;
+  color: black;
+}
+
+.education-open {
+  display: block;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
