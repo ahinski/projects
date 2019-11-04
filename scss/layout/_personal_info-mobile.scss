@@ -1,0 +1,96 @@
+.personal_info {
+   /* display: grid;
+    grid-template-areas:
+    'photo name'
+    'photo github'
+    'photo social';
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 50% 25% 25%; */
+    // border-bottom: 1px solid rgba(0,0,0,0.29);
+}
+.personal_info-top {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-items: center;
+}
+.personal_info-top-photo {
+    margin: auto;
+}
+.personal_info-top-name {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 0;
+    h2 {
+        margin: 10px;
+    }
+}
+.personal_info-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.personal_info-social-github {
+    display: flex;
+    align-items: center;
+    &:hover {
+        .personal_info-social-github-link a:after{
+            width: 100%;
+            color: $dark-color;
+        }
+        .personal_info-social-github-link a {
+            color: $dark-color;
+        }
+    }
+}
+.personal_info-social-github-icon, .personal_info-social-telegram-icon {
+    display: inline-block;
+}
+.personal_info-social-github-link {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 7px;
+    a {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+}
+.personal_info-social-header {
+    display: inline-block;
+}
+.personal_info-social-telegram {
+    display: flex;
+    align-items: center; 
+    &:hover {
+        .personal_info-social-telegram-link a:after{
+            width: 100%;
+        }
+        .personal_info-social-telegram-link a {
+            color: $dark-color;
+        }
+    }
+}
+.personal_info-social-telegram-link {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 7px;
+    a {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+}
+.photo {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 4px solid black;
+    transition: border .1s ease-in-out;
+    &:hover {
+        border: 4px solid $dark-color;
+    }
+}
+.github-logo, .telegram-logo {
+    width: 30*0.88px;
+    height: 30px;
+}

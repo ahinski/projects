@@ -1,0 +1,83 @@
+.projects {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+}
+.projects-header {
+    margin: 0;
+    font-size: 2em;
+}
+.projects-slider {
+    position: relative;
+    margin-top: 20px;
+    height: 220px;
+}
+.projects-slider-item_container {
+    margin: auto;
+}
+.projects-slider-item {
+    position: absolute;
+    left: 50%;
+    margin-left: (-325px/2);
+    width: 324px;
+    height: (325px/1.5);
+    border: 2px solid black;
+    transition: all .1s ease-in-out;
+}
+.description {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 2;
+    span {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+.image {
+    position: absolute;
+    img {
+        max-width: 325px;
+        height: (325px/1.5);
+    }
+}
+.projects-slider-control {
+    position: absolute;
+    height: 350px;
+    top: 4px;
+    font-size: 3em;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: color .1s ease-in-out;
+    transition: font-size .01s ease-in-out;
+    &:hover {
+        color: $main-color;
+        font-size: 3.5em;
+    }
+}
+.slider-top {
+    z-index: 2;
+}
+.slider-bottom {
+    z-index: 1;
+}
+.slider-toRight {
+    transform: translateX(150px);
+    opacity: 0;
+}
+.slider-toLeft {
+    transform: translateX(-150px);
+    opacity: 0;
+}
+.description-open {
+    display: block;
+}

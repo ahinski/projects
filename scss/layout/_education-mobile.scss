@@ -1,0 +1,38 @@
+.education {
+    position: relative;
+    margin: auto;
+}
+.education-header {
+    font-size: 2em;
+}
+.education-btn {
+    display: block;
+    h2 {
+        margin-bottom: 5px;
+    }
+    &:hover {
+        h2 {
+            color: $dark-color;
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}
+.education-btn-list {
+    display: none;
+    padding-left: 0;
+    text-align: left;
+    list-style-type: none;    
+    transition: opacity .1s ease;
+}
+.education-btn-list-element {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+    color: black;
+}
+.education-open {
+    display: block;
+}
